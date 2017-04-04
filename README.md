@@ -58,5 +58,5 @@ inline void GATTRIBS(always_inline, nonnull(1), nothrow, unused) set_memory(void
 * If you need extra attributes other than the one's included then feel free to create macros for them.
   * To add a new attribute you create a macro prefixed with `GATTRIB_`.
     * For example: `#define GATTRIB_someattr __theattr__`
-* The default macro supports up to **8** attributes. You must modify it if you need more than 8 attributes. Should be fairly easy.
+* The `GATTRIBS` macro supports up to **8** parameters. You must modify it if you need more than 8 attributes. Should be fairly easy.
 * There's also a shorter alias called `GATTR` included for convenience.
