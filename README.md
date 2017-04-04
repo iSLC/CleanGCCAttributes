@@ -35,41 +35,6 @@ inline float GATTRIB(always_inline) add(float a, float b)
 
 # Example 3
 
-For macros that can be used both with and without any arguments. The one which takes arguments is suffixed with an underscore `_`.
-
-Take the `deprecated` attribute for example. The version without any speciffic arguments:
-```C
-inline int __attribute__ ((__deprecated__)) sub(int a, int b)
-{
-    return a - b;
-}
-```
-
-Becomes:
-```C
-inline int GATTRIB(deprecated) sub(int a, int b)
-{
-    return a - b;
-}
-```
-
-The version with speciffic arguments:
-```C
-inline int __attribute__ ((__deprecated__("too simple!")) sub(int a, int b)
-{
-    return a - b;
-}
-```
-
-Becomes:
-```C
-inline int GATTRIB(deprecated("too simple!")) sub(int a, int b)
-{
-    return a - b;
-}
-```
-# Example 4
-
 To specify more than one attribute, append an `S` to the macro name so that `GATTRIB` becomes `GATTRIBS`.
 
 For example:
@@ -92,8 +57,6 @@ inline void GATTRIBS(always_inline, nonnull(1), nothrow, unused) set_memory(void
 
 * If you need extra attributes other than the one's included then feel free to create macros for them.
   * To add a new attribute you create a macro prefixed with `GATTRIB_`.
-    * Without arguments: `#define GATTRIB_someattr __theattr__`
-    * With arguments: `#define GATTRIB_someattr(a, b, c) __theattr__(a, b, c)`
-    * With variadic arguments: `#define GATTRIB_someattr(...) __theattr__(__VA_ARGS__)`
+    * For example: `#define GATTRIB_someattr __theattr__`
 * The default macro supports up to **8** attributes. You must modify it if you need more than 8 attributes. Should be fairly easy.
 * There's also a shorter alias called `GATTR` included for convenience.
