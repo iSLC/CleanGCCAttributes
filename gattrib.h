@@ -4,39 +4,36 @@
 #define _GATTRIBS_H_
 
 // Common Shared Attributes.
-#define GATTRIB_aligned(x) __aligned__(x)
+#define GATTRIB_aligned __aligned__
 #define GATTRIB_cold __cold__
 #define GATTRIB_deprecated __deprecated__
-#define GATTRIB_deprecated_(m) __deprecated__(m)
 #define GATTRIB_hot __hot__
-#define GATTRIB_section(n) __section__(n)
+#define GATTRIB_section __section__
 #define GATTRIB_unused __unused__
 #define GATTRIB_used __used__
-#define GATTRIB_visibility(t) __visibility__(t)
+#define GATTRIB_visibility __visibility__
 #define GATTRIB_weak __weak__
 // x86 Common Shared Attributes.
 #define GATTRIB_ms_struct ms_struct
 #define GATTRIB_gcc_struct gcc_struct
 // Common Function Attributes.
-#define GATTRIB_alias(x) __alias__(x)
-#define GATTRIB_alloc_align(...) __alloc_align__(__VA_ARGS__)
-#define GATTRIB_alloc_size(...) __alloc_size__(__VA_ARGS__)
+#define GATTRIB_alias __alias__(x)
+#define GATTRIB_alloc_align __alloc_align__
+#define GATTRIB_alloc_size __alloc_size__
 #define GATTRIB_always_inline __always_inline__
 #define GATTRIB_artificial __artificial__
-#define GATTRIB_assume_aligned(...) __assume_aligned__(__VA_ARGS__)
+#define GATTRIB_assume_aligned __assume_aligned__
 #define GATTRIB_const __const__
 #define GATTRIB_constructor __constructor__
-#define GATTRIB_constructor_(p) __constructor__(p)
 #define GATTRIB_destructor __destructor__
-#define GATTRIB_destructor_(p) __destructor__(p)
-#define GATTRIB_error(m) __error__(m)
-#define GATTRIB_warning(m) __warning__(m)
+#define GATTRIB_error __error__
+#define GATTRIB_warning __warning__
 #define GATTRIB_externally_visible __externally_visible__
 #define GATTRIB_flatten __flatten__
-#define GATTRIB_format(...) __format__(__VA_ARGS__)
-#define GATTRIB_format_arg(i) __format_arg__(i)
+#define GATTRIB_format __format__
+#define GATTRIB_format_arg __format_arg__
 #define GATTRIB_gnu_inline __gnu_inline__
-#define GATTRIB_ifunc(r) __ifunc__(r)
+#define GATTRIB_ifunc __ifunc__
 #define GATTRIB_interrupt __interrupt__
 #define GATTRIB_interrupt_handler __interrupt_handler__
 #define GATTRIB_leaf __leaf__
@@ -53,44 +50,42 @@
 #define GATTRIB_noclone __noclone__
 #define GATTRIB_noinline __noinline__
 #define GATTRIB_nonnull __nonnull__
-#define GATTRIB_nonnull_(...)  __nonnull__(__VA_ARGS__)
 #define GATTRIB_noplt __noplt__
 #define GATTRIB_noreturn __noreturn__
 #define GATTRIB_nothrow __nothrow__
-#define GATTRIB_optimize(...)  __optimize__(__VA_ARGS__)
+#define GATTRIB_optimize  __optimize__
 #define GATTRIB_pure __pure__
 #define GATTRIB_returns_nonnull __returns_nonnull__
 #define GATTRIB_returns_twice __returns_twice__
 #define GATTRIB_sentinel __sentinel__
-#define GATTRIB_sentinel_(n) __sentinel__(n)
+#define GATTRIB_sentinel_ __sentinel__
 #define GATTRIB_simd __simd__
-#define GATTRIB_simd_(n) __simd__(n)
 #define GATTRIB_stack_protect __stack_protect__
-#define GATTRIB_target(...) __target__(__VA_ARGS__)
-#define GATTRIB_target_clones(...) __target_clones__(__VA_ARGS__)
+#define GATTRIB_target __target__
+#define GATTRIB_target_clones __target_clones__
 #define GATTRIB_warn_unused_result __warn_unused_result__
 #define GATTRIB_weakref __weakref_
-#define GATTRIB_weakref_(r) __weakref_(r)
+#define GATTRIB_weakref_ __weakref_
 // x86 Common Function Attributes.
 #define GATTRIB_cdecl __cdecl__
 #define GATTRIB_fastcall __fastcall__
 #define GATTRIB_thiscall __thiscall__
 #define GATTRIB_ms_abi __ms_abi__
 #define GATTRIB_sysv_abi __sysv_abi__
-#define GATTRIB_callee_pop_aggregate_return(n) __callee_pop_aggregate_return__(n)
+#define GATTRIB_callee_pop_aggregate_return __callee_pop_aggregate_return__
 #define GATTRIB_ms_hook_prologue __ms_hook_prologue__
-#define GATTRIB_regparm(n) __regparm__(n)
+#define GATTRIB_regparm __regparm__
 #define GATTRIB_sseregparm __sseregparm__
 #define GATTRIB_force_align_arg_pointer __force_align_arg_pointer__
 #define GATTRIB_stdcall __stdcall__
 // Common Variable Attributes.
-#define GATTRIB_cleanup(f) __cleanup__(f)
+#define GATTRIB_cleanup __cleanup__
 #define GATTRIB_common __common__
 #define GATTRIB_nocommon __nocommon__
-#define GATTRIB_mode(m) __mode__(m)
+#define GATTRIB_mode __mode__
 #define GATTRIB_packed __packed__
-#define GATTRIB_tls_model(m) __tls_model__(m)
-#define GATTRIB_vector_size(n) __vector_size__(n)
+#define GATTRIB_tls_model __tls_model__
+#define GATTRIB_vector_size __vector_size__
 // x86 Common Variable Attributes.
 //...
 // Common Type Attributes.
@@ -98,7 +93,7 @@
 #define GATTRIB_designated_init __designated_init__
 #define GATTRIB_may_alias __may_alias__
 #define GATTRIB_packed __packed__
-#define GATTRIB_scalar_storage_order(e) __scalar_storage_order__(e)
+#define GATTRIB_scalar_storage_order __scalar_storage_order__
 #define GATTRIB_transparent_union __transparent_union__
 // x86 Common Type Attributes.
 //...
